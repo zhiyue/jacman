@@ -44,6 +44,7 @@ author:
   weibo_verifier: b3593ceb ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
   tsina:  2176287895    ## e.g. 2176287895  Your weibo ID,It will be used in share button.
   douban:  wuchong1014   ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
+  zhihu: jark  ## e.g. jark  for http://www.zhihu.com/people/jark
   email:  imjark@gmail.com    ## e.g. imjark@gmail.com
   twitter:  jarkwu  ## e.g. jarkwu for https://twitter.com/jarkwu
   github:  wuchong   ## e.g. wuchong for https://github.com/wuchong
@@ -106,3 +107,7 @@ google_cse:
 ## layout: search 
 ## title: search
 ## ---
+baidu_search:     ## http://zn.baidu.com/
+  enable: false
+  id:   ## e.g. "783281470518440642"  for your baidu search id
+  site: http://zhannei.baidu.com/cse/search  ## your can change to your site instead of the default site
