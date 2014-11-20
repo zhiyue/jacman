@@ -28,7 +28,7 @@ Jacman 需要安装 Hexo 2.7 及以上版本，请先升级您的 Hexo 程序，
 ###更新
 ```
 cd themes/jacman
-git pull
+git pull origin master
 ```
 请先备份您主题目录下的 `_config.yml` 文件后再升级。
 
