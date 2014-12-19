@@ -23,7 +23,12 @@ Jacman 需要安装 Hexo 2.7 及以上版本，请先升级您的 Hexo 程序，
 
 ###启用
 
-修改你的博客根目录下的`config.yml`配置文件中的`theme`属性，将其设置为`jacman`。同时建议设置`stylus`属性中的`compress`值为true，会自动压缩 CSS 文件。
+修改你的博客根目录下的`_config.yml`配置文件中的`theme`属性，将其设置为`jacman`。同时建议设置`stylus`属性中的`compress`值为true，会自动压缩 CSS 文件，hexo默认配置中不包含这一项，建议开启。如下。
+```
+theme: jacman
+stylus:
+  compress: true
+```
 
 ###更新
 ```
@@ -64,7 +69,7 @@ author_img: img/author.jpg   ## 网站底部的博主头像
 
 #### 首页相关
 index:
-  expand: false              ## 首页文章是否展开。默认为不展开，卡片式。
+  expand: true              ## 首页文章是否展开。默认为展开式，显示 Read More。
   excerpt_link: Read More    
   
 #### 作者信息
@@ -157,7 +162,7 @@ title: tags (或categories)
 本主题可以设置网站相关图片，例如网站图标（`favicon`）、网站logo（`imglogo`）、作者头像（`author_img`）。建议启用网站logo，格式建议为`.svg`或`.png`格式。同时建议提供配套的 favicon 以及在苹果设备上的图标`apple_icon`（背景不要透明）。
 
 - **首页显示模式 Index**
-目前首页的显示模式支持两种，一种是原先的卡片式（前往 [Demo](http://wuchong.me/jacman) 预览），另一种是类似官方主题的文章展开式（本站即采用的这种）。两者各有优劣，前者首页加载速度更快，后者文章内容更能吸引读者。主题默认采用第一种卡片式，如需开启第二种展开式，请设置`index`属性下的`expand: true`。
+目前首页的显示模式支持两种，一种是原先的卡片式（前往 [Demo](http://wuchong.me/jacman) 预览），另一种是类似官方主题的文章展开式（[本站](http://wuchong.me)即采用的这种）。两者各有优劣，前者首页加载速度更快，后者文章内容更能吸引读者。主题默认采用后一种展开式，如需开启第一种卡片式，请设置`index`属性下的`expand: false`。
 
  卡片式的文章摘要是截取文章内容的前140个字，也可以自己总结`description`并将其放在开头的`front-matter`中。展开式的文章摘要就是使用`<!-- more -->`截取了。
 
@@ -241,3 +246,11 @@ photos:
 - **Q：英语更能突显我的逼格，怎么换成英语？**
 >配置你的博客根目录下的`_config.yml`，去掉`language: zh-CN`。
 
+- **Q：为什么我修改了配置文件/发表了博文，解析出来的却是乱码呢？ **
+> 请将你的配置文件/markdown文件保存成 `UTF-8` 格式。
+
+- **Q：为什么开启了微博秀后，显示是空白的，没有内容展示？ **
+> 每次修改参数都会这样，需要多刷新几次或者上传到服务器上就好了。
+
+- **Q：博主 Jacman Demo 站点中文章的 md 源文件在哪能看到呢？ **
+> 我将 Demo 站点所有源文件放在了 Jacman 的 [site](https://github.com/wuchong/jacman/tree/site) 分支下。
