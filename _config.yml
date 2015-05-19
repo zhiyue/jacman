@@ -3,7 +3,9 @@ menu:
   主页: /
   归档: /archives
   关于: /about
-  hello world: /hello world
+  Demo : /Demo
+##hello world: /hello world
+
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
